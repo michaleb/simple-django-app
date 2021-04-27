@@ -1,0 +1,9 @@
+{% if "data" %}
+    <ul>
+    {% for key, value in data.items %} 
+      <p>{{key}} - {{value}}</p>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No data are available.</p>
+{% endif %}
