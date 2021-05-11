@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     
     # Application added by me
     'intro',
+    'blog',
+    'djmodels',
+    
 ]
 
 MIDDLEWARE = [
