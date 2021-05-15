@@ -4,7 +4,7 @@ from datetime import datetime
 from django.db.models.deletion import CASCADE
 
 class Grade(models.Model):
-    type = models.DecimalField(decimal_places = 2, max_digits = 3)
+    type = models.CharField(max_length = 2, default= "A+")
 
     def __str__(self):
         return self.type
