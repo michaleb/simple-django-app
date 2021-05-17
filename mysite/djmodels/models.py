@@ -2,6 +2,7 @@ from django.db import models
 from datetime import datetime
 
 from django.db.models.deletion import CASCADE
+from django.db.models.fields import IntegerField
 
 class Grade(models.Model):
     type = models.CharField(max_length = 2, default= "A+")
@@ -37,7 +38,7 @@ class School(models.Model):
 
 class Student(models.Model):
     full_name = models.CharField(max_length = 50)
-    year_of_graduation = models.IntegerField()
+    year_of_graduation = IntegerField(max_length = 4)
     school = models.ForeignKey(School, on_delete=models.CASCADE)
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     grade = models.ForeignKey(Grade, on_delete=models.CASCADE)
