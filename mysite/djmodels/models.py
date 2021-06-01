@@ -38,7 +38,7 @@ class School(models.Model):
 
 class Student(models.Model):
     full_name = models.CharField(max_length = 50)
-    year_of_graduation = IntegerField(max_length = 4)
+    year_of_graduation = IntegerField()
     school = models.ForeignKey(School, on_delete=models.CASCADE)
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     grade = models.ForeignKey(Grade, on_delete=models.CASCADE)
